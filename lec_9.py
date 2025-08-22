@@ -44,6 +44,7 @@ Created on Fri Aug 22 11:21:23 2025
 
 # 1. What does this print?
 # print(apply(lambda x: x%2==0, 10))
+# 6
 
 # 2. Call apply on n=100 and a lambda func 
 #    that takes in a parameter and returns 
@@ -84,10 +85,18 @@ def char_counts(s):
     is the number of consonants in s 
     """
     # your code here
+    (v,c) = (0,0)
+    vowels = "aeiou"
+    for char in s:
+        if char in vowels:
+            v += 1
+        else:
+            c += 1
+    return (v,c)
 
 
-# print(char_counts("abcd"))  # prints (1,3)
-# print(char_counts("zcght"))  # prints (0,5)
+print(char_counts("abcd"))  # prints (1,3)
+print(char_counts("zcght"))  # prints (0,5)
 
 ##################################################
 
