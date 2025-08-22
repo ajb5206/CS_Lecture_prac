@@ -90,16 +90,18 @@ def char_counts(s):
     #id check shows two different tuples
     (v,c) = (0,0)
     print(id((v, c)))
+    print(type((v,c)))
     vowels = "aeiou"
     for char in s:
         if char in vowels:
             v += 1
+            print(type(v))
         else:
             c += 1
     return id((v,c))
 
 
-print(char_counts("abcd"))  # prints (1,3)
+# print(char_counts("abcd"))  # prints (1,3)
 # print(char_counts("zcght"))  # prints (0,5)
 
 ##################################################
@@ -168,10 +170,13 @@ def sum_and_prod(L):
     is the product of all elements in L 
     """
     # your code here
-
+    (sums, prods) = (0,1)
+    for num in L:
+        sums += num
+        prods *= num
  
-
-# print(sum_and_prod([4,6,2,5]))   # prints (17, 240)
+    return (sums, prods)
+print(sum_and_prod([4,6,2,5]))   # prints (17, 240)
 
 
 
