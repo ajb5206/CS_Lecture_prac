@@ -252,17 +252,23 @@ def max_of_both(n, f1, f2):
             max_num = f2(num)
     return max_num
 
-print(max_of_both(2, lambda x:x-1, lambda x:x+1))  # prints 3
-print(max_of_both(10, lambda x:x*2, lambda x:x/2))  # prints 20
+# print(max_of_both(2, lambda x:x-1, lambda x:x+1))  # prints 3
+# print(max_of_both(10, lambda x:x*2, lambda x:x/2))  # prints 20
 
 
 def sublist_sum(L):
     """ L is a list whose elements are lists with int elements
     Returns the sum of all int elements. """
     # your code here
+    total = 0
+    for es in L:
+        for e in es:
+            total += e
+    return total
+        
 
-# print(sublist_sum([[1,2], [4,5,6]])) # prints 18
-
+print(sublist_sum([[1,2], [4,5,6]])) # prints 18
+print(sublist_sum([[1,2], [4,5,6], [7,8,9]]))
 
 #############################################
 ################## ANSWERS TO AT HOME ####################
