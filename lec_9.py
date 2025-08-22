@@ -176,7 +176,7 @@ def sum_and_prod(L):
         prods *= num
  
     return (sums, prods)
-print(sum_and_prod([4,6,2,5]))   # prints (17, 240)
+# print(sum_and_prod([4,6,2,5]))   # prints (17, 240)
 
 
 
@@ -232,7 +232,7 @@ def always_sunny(t1, t2):
     first = t1[0] + t2[0]
     return (sun[0], first)
 
-# always_sunny(('cloudy' ), ('cold',))  # returns what?
+# print(always_sunny(('cloudy' ), ('cold',)))  # returns what?
 
 
 
@@ -243,9 +243,17 @@ def max_of_both(n, f1, f2):
     Returns the maximum value of all these results.
     """
     # your code here
+    # initialize max_num variable and run through the range of n+1 with each func
+    max_num = 0
+    for num in range(n+1):
+        if f1(num) > max_num:
+            max_num = f1(num)
+        if f2(num) > max_num:
+            max_num = f2(num)
+    return max_num
 
-# print(max_of_both(2, lambda x:x-1, lambda x:x+1))  # prints 3
-# print(max_of_both(10, lambda x:x*2, lambda x:x/2))  # prints 20
+print(max_of_both(2, lambda x:x-1, lambda x:x+1))  # prints 3
+print(max_of_both(10, lambda x:x*2, lambda x:x/2))  # prints 20
 
 
 def sublist_sum(L):
