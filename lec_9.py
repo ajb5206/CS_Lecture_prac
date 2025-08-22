@@ -85,18 +85,22 @@ def char_counts(s):
     is the number of consonants in s 
     """
     # your code here
+    # unpack the tuple (0,0) in v, c
+    #v and c are just integers on their own now
+    #id check shows two different tuples
     (v,c) = (0,0)
+    print(id((v, c)))
     vowels = "aeiou"
     for char in s:
         if char in vowels:
             v += 1
         else:
             c += 1
-    return (v,c)
+    return id((v,c))
 
 
 print(char_counts("abcd"))  # prints (1,3)
-print(char_counts("zcght"))  # prints (0,5)
+# print(char_counts("zcght"))  # prints (0,5)
 
 ##################################################
 
