@@ -45,7 +45,7 @@ def make_ordered_list(n):
     return(list_n)
 
     
-#print(make_ordered_list(6))  # prints [0, 1, 2, 3, 4, 5, 6]
+print(type(make_ordered_list(6)))  # prints [0, 1, 2, 3, 4, 5, 6]
 
 #####################################################
 
