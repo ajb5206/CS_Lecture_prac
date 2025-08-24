@@ -45,7 +45,7 @@ def make_ordered_list(n):
     return(list_n)
 
     
-print(type(make_ordered_list(6)))  # prints [0, 1, 2, 3, 4, 5, 6]
+# print(type(make_ordered_list(6)))  # prints [0, 1, 2, 3, 4, 5, 6]
 
 #####################################################
 
@@ -57,8 +57,10 @@ def remove_elem(L, e):
     Returns a new list with elements in the same order as L
     but without any elements equal to e. 
     """
-    # your code here
-
+    for el in L:
+        if el == e:
+            L.remove(el)
+    return L
   
 # L = [1,2,2,2]
 # print(remove_elem(L, 2))    # prints [1]
