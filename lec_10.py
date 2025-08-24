@@ -19,12 +19,15 @@ Created on Sat Aug 23 13:18:15 2025
 
 ############# YOU TRY IT #####################
 # What is the value of L1, L2, L3, and L after these commands?
-# L1 = ['re']
-# L2 = ['mi']
-# L3 = ['do']
-# L4 = L1 + L2
-# L3.append(L4)
-# L = L2.append(L3)
+L1 = ['re']
+L2 = ['mi']
+L3 = ['do']
+L4 = L1 + L2
+L3.append(L4)
+L = L2.append(L3)
+L4 = "remi"
+L3 = "doremi"
+L = "midoremi"
 
 #################################################
 
@@ -36,7 +39,10 @@ def make_ordered_list(n):
     Returns a list containing all ints in order 
     from 0 to n (inclusive)
     """
-    # your code here
+    list_n = []
+    for num in range(n+1):
+        list_n.append(num)
+    return(list_n)
 
     
 #print(make_ordered_list(6))  # prints [0, 1, 2, 3, 4, 5, 6]
