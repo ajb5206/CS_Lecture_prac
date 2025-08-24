@@ -57,17 +57,18 @@ def remove_elem(L, e):
     Returns a new list with elements in the same order as L
     but without any elements equal to e. 
     """
-    for el in L:
-        if el == e:
-            L.remove(el)
+    while e in L:
+        for el in L:
+            if el == e:
+                L.remove(el)
     return L
-  
-# L = [1,2,2,2]
-# print(remove_elem(L, 2))    # prints [1]
-# L = [1,2,2,2]
-# print(remove_elem(L, 1))    # prints [2,2,2]
-# L = [1,2,2,2]
-# print(remove_elem(L, 0))    # prints [1,2,2,2]
+
+L = [1,2,2,2]
+print(remove_elem(L, 2))    # prints [1]
+L = [1,2,2,2]
+print(remove_elem(L, 1))    # prints [2,2,2]
+L = [1,2,2,2]
+print(remove_elem(L, 0))    # prints [1,2,2,2]
 
 
 #######################################
