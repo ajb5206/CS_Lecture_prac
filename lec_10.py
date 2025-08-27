@@ -71,12 +71,12 @@ def remove_elem(L, e):
             new_list.append(elem)
     return new_list
 
-L = [1,2,2,2]
-print(remove_elem(L, 2))    # prints [1]
-L = [1,2,2,2]
-print(remove_elem(L, 1))    # prints [2,2,2]
-L = [1,2,2,2]
-print(remove_elem(L, 0))    # prints [1,2,2,2]
+# L = [1,2,2,2]
+# print(remove_elem(L, 2))    # prints [1]
+# L = [1,2,2,2]
+# print(remove_elem(L, 1))    # prints [2,2,2]
+# L = [1,2,2,2]
+# print(remove_elem(L, 0))    # prints [1,2,2,2]
 
 
 #######################################
@@ -118,11 +118,12 @@ def count_words(sen):
     words = sen.split(" ")
     return len(words)
 
-s = "Hello it's me"
-print(count_words(s))   # prints 3
 
-s = "I just took a DNA test turns out I'm 100% splitting strings"
-print(count_words(s))   # prints 12
+# s = "Hello it's me"
+# print(count_words(s))   # prints 3
+
+# s = "I just took a DNA test turns out I'm 100% splitting strings"
+# print(count_words(s))   # prints 12
 
 ###########################################
 
@@ -148,13 +149,15 @@ def sort_words(sen):
     Returns a list containing all the words in sen but
     sorted in alphabetical order. """
     # your code here
+    my_list = sorted(sen.split(" "))
+    return my_list
 
 
-# s = "look at this photograph"
-# print(sort_words(s))    # prints ['at', 'look', 'photograph', 'this']
+s = "look at this photograph"
+print(sort_words(s))    # prints ['at', 'look', 'photograph', 'this']
 
-# s = "now this is a story all about how my life got flipped turned upside down"
-# print(sort_words(s))
+s = "now this is a story all about how my life got flipped turned upside down"
+print(sort_words(s))
 
 ##########################################
 
