@@ -104,11 +104,13 @@ def count_words(sen):
     """ sen is a string representing a sentence 
     Returns how many words are in sen (i.e. a word is a 
     a sequence of characters between spaces. """
-    count = 1
-    for char in sen:
-        if char == " ":
-            count += 1
-    return count
+    # count = 1
+    # for char in sen:
+    #     if char == " ":
+    #         count += 1
+    # return count
+    words = sen.split(" ")
+    return len(words)
 
 s = "Hello it's me"
 print(count_words(s))   # prints 3
