@@ -381,7 +381,13 @@ def all_true(n, Lf):
     Returns True if each and every function in Lf returns True when called 
     with n as a parameter. Otherwise returns False. 
     """
-    # Your code here
+    for i in range(len(Lf)):
+        if Lf(i)(n) == False:
+            return False
+        else:
+            return True
+        
 
+    
 # Examples:    
 # all_true() # prints 6
