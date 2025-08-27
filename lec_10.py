@@ -153,11 +153,11 @@ def sort_words(sen):
     return my_list
 
 
-s = "look at this photograph"
-print(sort_words(s))    # prints ['at', 'look', 'photograph', 'this']
+# s = "look at this photograph"
+# print(sort_words(s))    # prints ['at', 'look', 'photograph', 'this']
 
-s = "now this is a story all about how my life got flipped turned upside down"
-print(sort_words(s))
+# s = "now this is a story all about how my life got flipped turned upside down"
+# print(sort_words(s))
 
 ##########################################
 
@@ -311,7 +311,14 @@ def sort_words(s):
 # L3.sort()
 # del(L3[0])
 # L3.append(['fa', 'la'])
+# print(L3)
 # What's the value of L3 here?
+
+#L4 = ['re', 'mi']
+#L3 = ['do', 're', 'mi']
+#L3 = ['do', 'mi', 're']
+#L3 = ['mi', 're', ['fa', 'la']]
+
 
 ## Question 2
 # L1 = ['bacon', 'eggs']
@@ -319,7 +326,12 @@ def sort_words(s):
 # brunch = L1
 # L1.append('juice')
 # brunch.extend(L2)
+# print(brunch)
 # What's the value of brunch here?
+
+#brunch = ['bacon', 'eggs'] = L1
+#L1 = ['bacon', 'eggs', 'juice'] = brunch
+#brunch = ['bacon', 'eggs', 'juice', 'toast', 'jam']
 
 ## Question 3. 
 def apply_to_each(L, f):
@@ -327,14 +339,16 @@ def apply_to_each(L, f):
         f is a list that takes in a number and returns a number
     Mutate L such that you apply function f to every element in L """
     # your code here
+    for i in range(len(L)):
+        L[i] = f(L[i])
 
-# test = [1,-2,3]
-# apply_to_each(test, lambda x: x**2)
-# print(test)   # prints [1,4,9]
+test = [1,-2,3]
+apply_to_each(test, lambda x: x**2)
+print(test)   # prints [1,4,9]
 
-# test = [-7, 8, 5, -8, -3]
-# apply_to_each(test, abs)
-# print(test)   # prints [7, 8, 5, 8, 3]
+test = [-7, 8, 5, -8, -3]
+apply_to_each(test, abs)
+print(test)   # prints [7, 8, 5, 8, 3]
 
 
 
@@ -360,3 +374,14 @@ def apply_to_each(L, f):
 
 ############################
 ############################
+
+def all_true(n, Lf):
+    """ n is an int
+        Lf is a list of functions that take in an int and return a Boolean
+    Returns True if each and every function in Lf returns True when called 
+    with n as a parameter. Otherwise returns False. 
+    """
+    # Your code here
+
+# Examples:    
+# all_true() # prints 6
