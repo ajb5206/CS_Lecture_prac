@@ -25,10 +25,12 @@ L3 = ['do']
 L4 = L1 + L2
 L3.append(L4)
 L = L2.append(L3)
-L4 = "remi"
-L3 = "doremi"
-L = "midoremi"
-
+# L4 = ['re', 'mi']
+# L3 = ['do', ['re', 'mi']]
+# L = Nonef
+# print(L4)
+# print(L3)
+# print(L)
 #################################################
 
 
@@ -45,7 +47,7 @@ def make_ordered_list(n):
     return(list_n)
 
     
-# print(type(make_ordered_list(6)))  # prints [0, 1, 2, 3, 4, 5, 6]
+# print(make_ordered_list(6))  # prints [0, 1, 2, 3, 4, 5, 6]
 
 #####################################################
 
@@ -63,12 +65,12 @@ def remove_elem(L, e):
                 L.remove(el)
     return L
 
-L = [1,2,2,2]
-print(remove_elem(L, 2))    # prints [1]
-L = [1,2,2,2]
-print(remove_elem(L, 1))    # prints [2,2,2]
-L = [1,2,2,2]
-print(remove_elem(L, 0))    # prints [1,2,2,2]
+# L = [1,2,2,2]
+# print(remove_elem(L, 2))    # prints [1]
+# L = [1,2,2,2]
+# print(remove_elem(L, 1))    # prints [2,2,2]
+# L = [1,2,2,2]
+# print(remove_elem(L, 0))    # prints [1,2,2,2]
 
 
 #######################################
@@ -102,14 +104,17 @@ def count_words(sen):
     """ sen is a string representing a sentence 
     Returns how many words are in sen (i.e. a word is a 
     a sequence of characters between spaces. """
-    # your code here
+    count = 1
+    for char in sen:
+        if char == " ":
+            count += 1
+    return count
 
+s = "Hello it's me"
+print(count_words(s))   # prints 3
 
-# s = "Hello it's me"
-# print(count_words(s))   # prints 3
-
-# s = "I just took a DNA test turns out I'm 100% splitting strings"
-# print(count_words(s))   # prints 12
+s = "I just took a DNA test turns out I'm 100% splitting strings"
+print(count_words(s))   # prints 12
 
 ###########################################
 
