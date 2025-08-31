@@ -6,12 +6,16 @@ def count_sqrts(nums_list):
     Returns how many elements in nums_list are exact squares of elements in the same list, including itself.
     """
     # Your code here
-    count = 0
-    for num in nums_list:
-        if num*num in nums_list:
-            count += 1
-            
-    return count
+    # Lnew = [e**2 for e in L]
+    # count = 0
+    # for num in nums_list:
+    #     if num*num in nums_list:
+    #         count += 1
+    # return count
+    squares_list = [num for num in nums_list if num*num in nums_list]
+    return len(squares_list)
+
+    
 
 # Examples:    
 print(count_sqrts([3,4,2,1,9,25])) # prints 3
