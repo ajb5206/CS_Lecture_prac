@@ -544,7 +544,6 @@ def make_wordle(guess, secret):
     """
     result = ""
     guessed = []
-    print(guess,secret)
     for i in range(len(secret)):
         if guess[i] == secret[i]:
             result += guess[i].upper()
@@ -553,7 +552,6 @@ def make_wordle(guess, secret):
             result += guess[i]
         else:
             result += ' '
-
     return result
  
 def play_game():
@@ -568,12 +566,8 @@ def play_game():
        For example: if guess is "struck" and the secret is "strike" then the
        user is presented with "ST   k".
     3) The user has 6 guesses to guess the secret word. """
-    ### word list gets the words correctly
     word_list = get_word_list(words)
-    ### call the new_word function instead of just saving the funciton in secret
-    ###secret only pulls "strict"
-    secret = new_word(word_list)
-    print(secret)
+    secret = new_word(word_list) #add argument to new_word function call
     wordle_len = 6
     n_guesses = 6
     win = False
@@ -598,10 +592,10 @@ def play_game():
             break
         else:
             break
-        if win:
-            print('YOU WIN')
-        else:
-            print('YOU LOSE')
+    if win:
+        print('YOU WIN')
+    else:
+        print('YOU LOSE')
 
 play_game()
 
