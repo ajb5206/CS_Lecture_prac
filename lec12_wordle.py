@@ -509,6 +509,7 @@ def new_word(words):
     """ words is a multi-line string.
     Returns a 6 letter word as a str. """
     words_list = get_word_list(words)
+    # print(words_list)
     return random.choice(words_list)
 
 ######## ....ASSUME YOU ARE GIVEN CODE UP TO HERE ############
@@ -567,7 +568,8 @@ def play_game():
        user is presented with "ST   k".
     3) The user has 6 guesses to guess the secret word. """
     word_list = get_word_list(words)
-    secret = new_word(word_list) #add argument to new_word function call
+    #word_list gets the word list as a list of words
+    secret = new_word(words) #add argument to new_word function call
     wordle_len = 6
     n_guesses = 6
     win = False
@@ -598,7 +600,7 @@ def play_game():
     else:
         print('YOU LOSE')
 
-play_game()
+# play_game()
 
 
 
@@ -690,7 +692,7 @@ def play_game():
     else:
         print('YOU LOSE')
     
-# play_game()
+play_game()
 
 
 
