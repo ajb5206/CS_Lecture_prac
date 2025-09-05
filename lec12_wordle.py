@@ -583,6 +583,7 @@ def play_game():
         # else:
         #     print("Not a word or not the correct length.")
         result = make_wordle(guess, secret)
+        n_guesses -= 1 # decrement n_guesses after a guess has been made
         print(result)
         print(f"You have {n_guesses} guesses left.")
         if n_guesses > 0:
