@@ -8,12 +8,15 @@ original_list = [1,2,35,10,5,8,9,23]
 # INSERT CODE HERE
 
 new_list = [el for el in original_list if el%5 != 0 ]
-print(new_list)
+# print(new_list)
 
 # b) Using list concatenation create a new list from the original list, 
 # where each element is half the original element
 # Expected output: [0.5, 1.0, 17.5, 5.0, 2.5, 4.0, 4.5, 11.5]
 # INSERT CODE HERE
+
+new_list = [el/2 for el in original_list]
+print(new_list)
 
 
 ########################################################################
