@@ -593,7 +593,7 @@ def play_game():
             break
         else:
             break
-    if win:
+    if win or guess == secret: #git add guess == secret check for win con
         print('YOU WIN')
     else:
         print('YOU LOSE')
