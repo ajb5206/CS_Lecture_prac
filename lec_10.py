@@ -314,24 +314,25 @@ def sort_words(s):
 # print(L3)
 # What's the value of L3 here?
 
-#L4 = ['re', 'mi']
-#L3 = ['do', 're', 'mi']
-#L3 = ['do', 'mi', 're']
-#L3 = ['mi', 're', ['fa', 'la']]
+# L4 = ['re', 'mi']
+# L3 = ['do', 're', 'mi']
+# L3 = ['do', 'mi', 're']
+# L3 = ['mi', 're']
+# L3 = ['mi', 're', ['fa', 'la']]
+
 
 
 ## Question 2
-# L1 = ['bacon', 'eggs']
-# L2 = ['toast', 'jam']
-# brunch = L1
-# L1.append('juice')
-# brunch.extend(L2)
-# print(brunch)
+L1 = ['bacon', 'eggs']
+L2 = ['toast', 'jam']
+brunch = L1
+L1.append('juice')
+brunch.extend(L2)
+print(brunch)
 # What's the value of brunch here?
-
-#brunch = ['bacon', 'eggs'] = L1
-#L1 = ['bacon', 'eggs', 'juice'] = brunch
-#brunch = ['bacon', 'eggs', 'juice', 'toast', 'jam']
+# brunch = ['bacon', 'eggs']
+# L1 = ['bacon', 'eggs', 'juice'] = brunch
+# brunch = ['bacon', 'eggs', 'juice', 'toast', 'jam']
 
 ## Question 3. 
 def apply_to_each(L, f):
@@ -342,13 +343,13 @@ def apply_to_each(L, f):
     for i in range(len(L)):
         L[i] = f(L[i])
 
-test = [1,-2,3]
-apply_to_each(test, lambda x: x**2)
-print(test)   # prints [1,4,9]
+# test = [1,-2,3]
+# apply_to_each(test, lambda x: x**2)
+# print(test)   # prints [1,4,9]
 
-test = [-7, 8, 5, -8, -3]
-apply_to_each(test, abs)
-print(test)   # prints [7, 8, 5, 8, 3]
+# test = [-7, 8, 5, -8, -3]
+# apply_to_each(test, abs)
+# print(test)   # prints [7, 8, 5, 8, 3]
 
 
 

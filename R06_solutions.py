@@ -5,18 +5,14 @@ original_list = [1,2,35,10,5,8,9,23]
 # a) Using List concatenation create a new list from the orignal list, 
 # removing all multiples of 5 from a list of numbers.
 # expected output: [1, 2, 8, 9, 23]
-# INSERT CODE HERE
-
-new_list = [el for el in original_list if el%5 != 0 ]
-# print(new_list)
+new_list = [i for i in original_list if i%5 != 0]
+print(new_list)
 
 # b) Using list concatenation create a new list from the original list, 
 # where each element is half the original element
 # Expected output: [0.5, 1.0, 17.5, 5.0, 2.5, 4.0, 4.5, 11.5]
-# INSERT CODE HERE
-
-new_list = [el/2 for el in original_list]
-# print(new_list)
+new_list = [i/2 for i in original_list]
+print(new_list)
 
 
 ########################################################################
@@ -37,18 +33,36 @@ def insert_element_list1(lst, x, n):
     n: x will be inserted after every nth element
     Returns: new modified list 
     """
-    # INSERT CODE HERE
-    new_list = []
-    for el in lst:
-        
-    return new_list
+    output_list = []
+    for i in range(len(lst)):
+        output_list.append(lst[i])
+        if (i+1) % n == 0:
+            output_list.append(x)
+    return output_list
+
+# Alternative solution
+def insert_element_list2(lst, x, n):
+    """
+    Parameters:
+    lst: input list
+    x: element to insert
+    n: x will be inserted after every nth element
+    Returns: new modified list 
+    """
+    i = n
+    while i < len(lst):
+        lst.insert(i, x)
+        i += n+1
+    return lst
 
 
 # testing
-nums = [1, 3, 5, 7, 9, 11,0, 2, 4, 6, 8, 10, 8, 9, 0, 4, 3, 0]
+nums = [1, 3, 5, 7, 9, 11, 0, 2, 4, 6, 8, 10, 8, 9, 0, 4, 3, 0]
 x = 20
 n = 4
 print(insert_element_list1(nums, x, n))
+nums = [1, 3, 5, 7, 9, 11,0, 2, 4, 6, 8, 10, 8, 9, 0, 4, 3, 0]
+print(insert_element_list2(nums, x, n))
 
 
 ########################################################################
@@ -68,8 +82,11 @@ def sort_list_of_lists(lst):
     n: index to sort by
     Returns: the sorted list 
     """
-    # INSERT CODE HERE
-    pass
+    output = []
+    for i in lst:
+        output.append((sorted(i)))
+        # write output.append((sorted(i, reverse=True))) to reverse
+    return output
 
 
 # testing
@@ -96,8 +113,8 @@ def split_list(lst, n):
     n: size of chunks
     Returns: new split list 
     """
-    # INSERT CODE HERE
-    pass
+    result = [lst[i:i+n] for i in range(0, len(lst), n)]
+    return result
 
 # testing
 nums = [12,45,23,67,78,90,45,32,100,76,38,62,73,29,83]
